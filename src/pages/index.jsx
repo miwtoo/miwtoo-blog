@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql } from "gatsby"
-import PostLink from "../components/post-link"
-import Layout from "../components/layout"
+import React from 'react';
+import { graphql } from 'gatsby';
+import PostLink from '../components/post-link';
+import Layout from '../components/layout';
 
 const IndexPage = ({
   data: {
@@ -9,18 +9,18 @@ const IndexPage = ({
   },
 }) => {
   const Posts = edges
-    .filter(edges => !!edges.node.frontmatter.date)
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .filter(ed => !!ed.node.frontmatter.date)
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
 
   return (
     <Layout>
       {Posts}
       <br />
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query {
@@ -41,4 +41,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

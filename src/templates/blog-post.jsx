@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
 
 export default function Template({ data }) {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark } = data;
+  const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
       <div className="blog-post-container">
@@ -18,7 +18,7 @@ export default function Template({ data }) {
         </div>
       </div>
     </Layout>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -32,4 +32,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
