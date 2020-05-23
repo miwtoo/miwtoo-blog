@@ -1,4 +1,9 @@
 {
+  "overrides": [
+    {
+      "files": [ "**/*.{jsx,js}" ]
+    }
+  ],
   "parser": "babel-eslint",
   "rules": {
     "react/jsx-uses-react": "error",
